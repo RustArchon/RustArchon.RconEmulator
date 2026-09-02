@@ -110,25 +110,15 @@ app.Run(async context =>
 app.Run();
 
 /// <summary>
-/// Scripts a response for the handful of commands that need a plausible reply to keep a real client
-/// happy (most tools poll <c>serverinfo</c>/<c>playerlist</c> right after connecting, and won't
-/// meaningfully proceed without something sensible back) - anything else just gets logged and
+/// Scripts a response for any command Data/responses.json has an entry for - most importantly
+/// <c>serverinfo</c>/<c>playerlist</c>, since most tools poll one or both right after connecting and
+/// won't meaningfully proceed without something sensible back, but any other command a real server has
+/// been observed responding to can get an entry too. Anything not scripted just gets logged and
 /// acknowledged with an empty, generic reply, which is deliberate: the goal is observing what a client
 /// sends for a given UI action, not simulating what running that command would actually do.
 /// </summary>
 static RconResponse BuildResponse(RconRequest request, ScriptedResponseProvider responseProvider)
 {
-    var command = request.Message.Trim();
-
-    if (command.Equals("serverinfo", StringComparison.OrdinalIgnoreCase))
-    {
-        return new RconResponse { Identifier = request.Identifier, Message = responseProvider.GetServerInfoJson(), Type = "Generic" };
-    }
-
-    if (command.Equals("playerlist", StringComparison.OrdinalIgnoreCase))
-    {
-        return new RconResponse { Identifier = request.Identifier, Message = responseProvider.GetPlayerListJson(), Type = "Generic" };
-    }
-
-    return new RconResponse { Identifier = request.Identifier, Message = string.Empty, Type = "Generic" };
+    var scripted = responseProvider.TryGetScriptedResponse(request.Message);
+    return new RconResponse { Identifier = request.Identifier, Message = scripted ?? string.Empty, Type = "Generic" };
 }
