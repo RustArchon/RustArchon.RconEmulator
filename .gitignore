@@ -1,0 +1,19 @@
+## .NET / Visual Studio
+
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+
+## This tool's own output - the point of running it, not something to commit
+
+commands.log

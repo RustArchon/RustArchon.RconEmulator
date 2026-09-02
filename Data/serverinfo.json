@@ -1,0 +1,22 @@
+{
+  "Hostname": "RustArchon Emulator",
+  "MaxPlayers": 20,
+  "Players": 3,
+  "Queued": 0,
+  "Joining": 0,
+  "ReservedSlots": 0,
+  "EntityCount": 143633,
+  "GameTime": "02/08/1985 13:04:05",
+  "Uptime": 85448,
+  "Map": "Procedural Map",
+  "Framerate": 127.0,
+  "Memory": 3514,
+  "MemoryUsageSystem": 0,
+  "Collections": 168,
+  "NetworkIn": 1024,
+  "NetworkOut": 2048,
+  "Restarting": false,
+  "SaveCreatedTime": "08/06/2026 18:26:38",
+  "Version": 2632,
+  "Protocol": "2632.287.1"
+}

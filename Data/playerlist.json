@@ -1,0 +1,38 @@
+[
+  {
+    "SteamID": "76561197960287930",
+    "OwnerSteamID": "0",
+    "DisplayName": "EmulatedPlayerOne",
+    "Ping": 45,
+    "Address": "192.0.2.10:12345",
+    "ConnectedSeconds": 3600,
+    "ViolationLevel": 0.0,
+    "CurrentLevel": 0.0,
+    "UnspentXp": 0.0,
+    "Health": 100.0
+  },
+  {
+    "SteamID": "76561197960287931",
+    "OwnerSteamID": "0",
+    "DisplayName": "EmulatedPlayerTwo",
+    "Ping": 62,
+    "Address": "192.0.2.11:12345",
+    "ConnectedSeconds": 1200,
+    "ViolationLevel": 0.0,
+    "CurrentLevel": 0.0,
+    "UnspentXp": 0.0,
+    "Health": 87.5
+  },
+  {
+    "SteamID": "76561197960287932",
+    "OwnerSteamID": "0",
+    "DisplayName": "EmulatedPlayerThree",
+    "Ping": 31,
+    "Address": "192.0.2.12:12345",
+    "ConnectedSeconds": 60,
+    "ViolationLevel": 0.0,
+    "CurrentLevel": 0.0,
+    "UnspentXp": 0.0,
+    "Health": 100.0
+  }
+]
